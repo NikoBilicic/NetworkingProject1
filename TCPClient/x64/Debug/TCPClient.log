@@ -1,0 +1,10 @@
+﻿  main_client.cpp
+C:\Dev\fanshawe\courses\INFO6016-Game Network Programming\FALL2024\TCPExamples\TCPClient\buffer.h(44,17): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main_client.cpp')
+  
+C:\Dev\fanshawe\courses\INFO6016-Game Network Programming\FALL2024\TCPExamples\TCPClient\buffer.h(54,21): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'main_client.cpp')
+  
+C:\Dev\fanshawe\courses\INFO6016-Game Network Programming\FALL2024\TCPExamples\TCPClient\main_client.cpp(130,48): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Dev\fanshawe\courses\INFO6016-Game Network Programming\FALL2024\TCPExamples\TCPClient\main_client.cpp(136,3): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
+  TCPClient.vcxproj -> C:\Dev\fanshawe\courses\INFO6016-Game Network Programming\FALL2024\TCPExamples\x64\Debug\TCPClient.exe
