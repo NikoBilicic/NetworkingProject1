@@ -18,18 +18,18 @@
 
 #define DEFAULT_PORT "8412"
 
-struct PacketHeader
-{
-	uint32_t packetSize;
-	uint32_t messageType;
-};
-
-struct ChatMessage
-{
-	PacketHeader header;
-	uint32_t messageLength;
-	std::string message;
-};
+//struct PacketHeader
+//{
+//	uint32_t packetSize;
+//	uint32_t messageType;
+//};
+//
+//struct ChatMessage
+//{
+//	PacketHeader header;
+//	uint32_t messageLength;
+//	std::string message;
+//};
 
 std::atomic<bool> isRunning(true);
 
