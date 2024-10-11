@@ -1,6 +1,6 @@
 #include "buffer.h"
 
-Buffer::Buffer(int size)
+Buffer::Buffer(int size = 512)
 {
 	m_BufferData.resize(size);
 	m_WriteIndex = 0;
@@ -34,6 +34,7 @@ void Buffer::WriteUInt16LE(uint16_t value)
 	m_BufferData[m_WriteIndex++] = value;
 	m_BufferData[m_WriteIndex++] = value >> 8;
 }
+
 uint16_t Buffer::ReadUInt16LE()
 {
 	uint16_t value = 0;

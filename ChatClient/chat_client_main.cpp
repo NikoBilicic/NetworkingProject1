@@ -160,6 +160,8 @@ int main(int arg, char** argv)
 		std::string input;
 		std::getline(std::cin, input);
 
+		printf("\033[1A");
+
 		ChatMessage message;
 		message.message = "[" + name + "]: " + input;
 		message.messageLength = message.message.length();
