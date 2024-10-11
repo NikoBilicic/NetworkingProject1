@@ -18,24 +18,10 @@
 
 #define DEFAULT_PORT "8412"
 
-//struct PacketHeader
-//{
-//	uint32_t packetSize;
-//	uint32_t messageType;
-//};
-//
-//struct ChatMessage
-//{
-//	PacketHeader header;
-//	uint32_t messageLength;
-//	std::string message;
-//};
-
 std::atomic<bool> isRunning(true);
 
 void receiveMessage(SOCKET socket)
 {
-
 	while (isRunning.load(std::memory_order_relaxed))
 	{
 		const int bufSize = 512;
@@ -44,7 +30,7 @@ void receiveMessage(SOCKET socket)
 		if (result > 0)
 		{
 			uint32_t packetSize = buffer.ReadUInt32LE();
-			uint32_t messageType = buffer.ReadUInt32LE();
+			uint16_t messageType = buffer.ReadUInt16LE();
 
 			if (messageType == 1)
 			{
@@ -129,7 +115,7 @@ int main(int arg, char** argv)
 		return 1;
 	}
 
-	printf("Connect to the server successfully!\n");
+	printf("Connect to the server successfully!\n\n");
 
 	//Join Message
 	ChatMessage joinMessage;
@@ -142,7 +128,7 @@ int main(int arg, char** argv)
 	Buffer buffer(bufSize);
 
 	buffer.WriteUInt32LE(joinMessage.header.packetSize);
-	buffer.WriteUInt32LE(joinMessage.header.messageType);
+	buffer.WriteUInt16LE(joinMessage.header.messageType);
 	buffer.WriteUInt32LE(joinMessage.messageLength);
 	buffer.WriteString(joinMessage.message);
 
@@ -151,7 +137,7 @@ int main(int arg, char** argv)
 
 
 	std::cout << "Conected to room as " << name << "...\n";
-	std::cout << "Type '/exit' to leave the chat.\n";
+	std::cout << "Type '/exit' to leave the chat.\n\n";
 
 	std::thread recieveThread(receiveMessage, serverSocket);
 
@@ -172,7 +158,7 @@ int main(int arg, char** argv)
 		Buffer buffer(bufSize);
 
 		buffer.WriteUInt32LE(message.header.packetSize); 
-		buffer.WriteUInt32LE(message.header.messageType);
+		buffer.WriteUInt16LE(message.header.messageType);
 		buffer.WriteUInt32LE(message.messageLength); 
 		buffer.WriteString(message.message); 
 
@@ -188,7 +174,7 @@ int main(int arg, char** argv)
 			Buffer buffer(bufSize);
 
 			buffer.WriteUInt32LE(exitMessage.header.packetSize);
-			buffer.WriteUInt32LE(exitMessage.header.messageType);
+			buffer.WriteUInt16LE(exitMessage.header.messageType);
 			buffer.WriteUInt32LE(exitMessage.messageLength);
 			buffer.WriteString(exitMessage.message);
 			

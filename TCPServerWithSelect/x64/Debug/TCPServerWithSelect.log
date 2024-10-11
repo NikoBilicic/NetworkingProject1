@@ -1,1 +1,11 @@
-﻿  TCPServerWithSelect.vcxproj -> C:\Dev\fanshawe\courses\INFO6016-Game Network Programming\FALL2024\TCPExamples\x64\Debug\TCPServerWithSelect.exe
+﻿  main_server_select.cpp
+C:\Users\grnwt\Downloads\Fanshawe\F24\INFO6016 Network Programming\Project 1 git\NetworkingProject1\TCPServerWithSelect\buffer.h(45,17): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main_server_select.cpp')
+  
+C:\Users\grnwt\Downloads\Fanshawe\F24\INFO6016 Network Programming\Project 1 git\NetworkingProject1\TCPServerWithSelect\buffer.h(55,21): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'main_server_select.cpp')
+  
+C:\Users\grnwt\Downloads\Fanshawe\F24\INFO6016 Network Programming\Project 1 git\NetworkingProject1\TCPServerWithSelect\main_server_select.cpp(192,52): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Users\grnwt\Downloads\Fanshawe\F24\INFO6016 Network Programming\Project 1 git\NetworkingProject1\TCPServerWithSelect\main_server_select.cpp(198,7): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
+  LINK : C:\Users\grnwt\Downloads\Fanshawe\F24\INFO6016 Network Programming\Project 1 git\NetworkingProject1\x64\Debug\TCPServerWithSelect.exe not found or not built by the last incremental link; performing full link
+  TCPServerWithSelect.vcxproj -> C:\Users\grnwt\Downloads\Fanshawe\F24\INFO6016 Network Programming\Project 1 git\NetworkingProject1\x64\Debug\TCPServerWithSelect.exe

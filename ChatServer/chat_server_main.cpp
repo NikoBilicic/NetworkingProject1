@@ -17,20 +17,6 @@
 
 #define DEFAULT_PORT "8412"
 
-//struct PacketHeader
-//{
-//	uint32_t packetSize;
-//	uint32_t messageType;
-//};
-//
-//struct ChatMessage
-//{
-//	PacketHeader header;
-//	uint32_t messageLength;
-//	std::string message;
-//};
-
-
 int main(int arg, char** argv)
 {
 	// Initiliaze Winsock
@@ -167,14 +153,14 @@ int main(int arg, char** argv)
 				}
 
 				uint32_t packetSize = buffer.ReadUInt32LE();
-				uint32_t messageType = buffer.ReadUInt32LE();
+				uint16_t messageType = buffer.ReadUInt16LE();
 
 				if (messageType == 1)
 				{
 					uint32_t messageLength = buffer.ReadUInt32LE();
 					std::string msg = buffer.ReadString(messageLength);
 
-					printf("PacketSize:%d\nMessageType:%d\nMessageLength:%d\nMessage:%s\n", packetSize, messageType, messageLength, msg.c_str());
+					printf("PacketSize:%d\nMessageType:%d\nMessageLength:%d\nMessage:%s\n\n", packetSize, messageType, messageLength, msg.c_str());
 
 
 					for (int j = 0; j < activeConnections.size(); j++)
