@@ -1,5 +1,6 @@
 ﻿  chat_client_main.cpp
-C:\Users\grnwt\Downloads\Fanshawe\F24\INFO6016 Network Programming\PROJECTS\Project 1 git\NetworkingProject1\ChatClient\chat_client_main.cpp(123,56): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
-C:\Users\grnwt\Downloads\Fanshawe\F24\INFO6016 Network Programming\PROJECTS\Project 1 git\NetworkingProject1\ChatClient\chat_client_main.cpp(156,49): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
-C:\Users\grnwt\Downloads\Fanshawe\F24\INFO6016 Network Programming\PROJECTS\Project 1 git\NetworkingProject1\ChatClient\chat_client_main.cpp(176,58): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
-  ChatClient.vcxproj -> C:\Users\grnwt\Downloads\Fanshawe\F24\INFO6016 Network Programming\PROJECTS\Project 1 git\NetworkingProject1\x64\Debug\ChatClient.exe
+C:\Fanshawe\Networking\NetworkingProject1\ChatClient\chat_client_main.cpp(123,56): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Fanshawe\Networking\NetworkingProject1\ChatClient\chat_client_main.cpp(153,49): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Fanshawe\Networking\NetworkingProject1\ChatClient\chat_client_main.cpp(172,58): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
+  LINK : C:\Fanshawe\Networking\NetworkingProject1\x64\Debug\ChatClient.exe not found or not built by the last incremental link; performing full link
+  ChatClient.vcxproj -> C:\Fanshawe\Networking\NetworkingProject1\x64\Debug\ChatClient.exe
