@@ -145,7 +145,7 @@ int main(int arg, char** argv)
 				}
 				else if (result == 0)
 				{
-					printf("Client disconnect");
+					printf("Client disconnect\n");
 					closesocket(socket);
 					activeConnections.erase(activeConnections.begin() + i);
 					i--;

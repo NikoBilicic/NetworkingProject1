@@ -162,8 +162,11 @@ int main(int arg, char** argv)
 		buffer.WriteUInt32LE(message.messageLength); 
 		buffer.WriteString(message.message); 
 
+
 		if (input == "/exit")
 		{
+			recieveThread.detach();
+
 			ChatMessage exitMessage;
 			exitMessage.message = "[" + name + "] has left the chatroom.";
 			exitMessage.messageLength = exitMessage.message.length();
