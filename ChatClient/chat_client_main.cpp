@@ -200,7 +200,7 @@ int main(int arg, char** argv)
 
 	WSACleanup();
 
-	system("CLS")
+	system("CLS");
 
 	return 0;
 }
