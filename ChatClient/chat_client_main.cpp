@@ -200,5 +200,7 @@ int main(int arg, char** argv)
 
 	WSACleanup();
 
+	system("CLS")
+
 	return 0;
 }
